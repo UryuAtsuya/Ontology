@@ -140,8 +140,8 @@ few_vals = [metrics[m]["few"] for m in labels]
 fig = plt.figure(figsize=(8, 4))
 x = range(len(labels))
 bar_w = 0.38
-plt.bar([i - bar_w/2 for i in x], zero_vals, width=bar_w, label="Ontologyなし")
-plt.bar([i + bar_w/2 for i in x], few_vals,  width=bar_w, label="Ontologyあり")
+plt.bar([i - bar_w/2 for i in x], zero_vals, width=bar_w, label="without Ontology")
+plt.bar([i + bar_w/2 for i in x], few_vals,  width=bar_w, label="with Ontology")
 plt.xticks(list(x), labels, rotation=25)
 plt.ylabel("Score")
 plt.legend()
